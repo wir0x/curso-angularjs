@@ -7,60 +7,9 @@
 </head>
 <body ng-controller="myController as vm">
 
-<h3>uppercase</h3>
-<p>Nombre: {{ vm.lastName | uppercase }}</p>
+<my-directive></my-directive>
 
-<h3>lowercase</h3>
-<p>Pais: {{ vm.country | lowercase}}</p>
 
-<h3>orderBy</h3>
-<ol>
-    <li ng-repeat="elem in vm.names | orderBy:'name'">
-        <span>{{ elem.name  +' - '+ elem.country}}</span>
-    </li>
-</ol>
-
-<h3>currency</h3>
-<h4>Price: {{ vm.price | currency }}</h4>
-<h4>Price: {{ vm.price | currency: 'Bs. ' }}</h4>
-<h4>Price: {{ vm.price | currency: '€. ' }}</h4>
-
-<h3>Filter filter</h3>
-<ol>
-    <li ng-repeat="elem in vm.countries | filter:'b'">
-        {{elem}}
-    </li>
-</ol>
-
-<h3>Filter by user input</h3>
-filter: <input type="text" ng-model="test"/>
-<ol>
-    <li ng-repeat="elem in vm.countries | filter:test">
-        {{elem}}
-    </li>
-</ol>
-
-<h3>Filter by user input</h3>
-<table border="1" >
-    <tr>
-        <th>Nr.</th>
-        <th ng-click="vm.orderByMe('name')">Name</th>
-        <th ng-click="vm.orderByMe('country')">Country</th>
-    </tr>
-
-    <tr ng-repeat="x in vm.names | orderBy:vm.myOrderBy">
-        <td >{{$index + 1 }}</td>
-        <td>{{x.name}}</td>
-        <td>{{x.country}}</td>
-    </tr>
-</table>
-
-<h3>Custom filter</h3>
-<ul>
-   <li ng-repeat="elem in vm.names">
-       {{elem.name | myFilter}}
-   </li>
-</ul>
 
 <script src="node_modules/angular/angular.js"></script>
 <script src="app.js"></script>
