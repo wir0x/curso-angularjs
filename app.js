@@ -16,17 +16,3 @@
     }
 })();
 
-
-(function () {
-    'use strict';
-    angular
-        .module('myApp')
-        .directive('myDirective', myDirective);
-
-    function myDirective() {
-        return {
-            template: "<h1> My Directive </h1>"
-        }
-    }
-})();
-

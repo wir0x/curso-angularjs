@@ -7,7 +7,14 @@
 </head>
 <body ng-controller="myController as vm">
 
-<my-directive></my-directive>
+<label for="name"></label>
+<input id="name" ng-model="name">
+<h1>Usted ingreso: {{name}}</h1>
+
+<form name="myForm">
+    Email: <input type="email" name="myAddress" ng-model="text">
+    <span ng-show="myForm.myAddress.$error.email" > no es un email valido!</span>
+</form>
 
 
 
