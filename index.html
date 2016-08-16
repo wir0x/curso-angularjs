@@ -7,10 +7,26 @@
 </head>
 <body ng-controller="myController as vm">
 
-Name: {{vm.person.name}} <br/>
-Age: {{vm.person.age}}<br/>
-CI: {{vm.person.ci}}<br/>
-Occupation: {{vm.person.occupation}}<br/>
+    <h3>My Url: {{vm.myURL}}</h3>
+
+    <h3>Local time: {{vm.localTime | date:" dd/MM/yy hh:mm:ss" }}</h3>
+
+    <h3>Lista de clientes</h3>
+    <table>
+        <thead>
+        <th>Nombre</th>
+        <th>Pais</th>
+        <th>Ciudad</th>
+        </thead>
+        <tbody>
+            <tr ng-repeat="elem in vm.customers">
+                <td>{{elem.Name}}</td>
+                <td>{{elem.Country}}</td>
+                <td>{{elem.City}}</td>
+            </tr>
+        </tbody>
+
+    </table>
 
 
 <script src="node_modules/angular/angular.js"></script>
