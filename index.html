@@ -7,8 +7,9 @@
 </head>
 <body ng-controller="myController as vm">
 
-<h1 ng-click="vm.changeName()"> {{vm.firstName}}</h1>
-
+Nombre: <input type="text" ng-model="vm.name"/>
+Apellido: <input type="text" ng-model="vm.lastName"/><br/>
+Nombre completo: {{vm.name +' '+  vm.lastName}}
 
 <script src="node_modules/angular/angular.js"></script>
 <script src="app.js"></script>
