@@ -10,9 +10,13 @@
     function myController() {
         var vm = this;
 
-        vm.firstName = "Gonzalo";
-        vm.lastName = "Salazar";
-        vm.country = "BOLIVIA";
+        vm.firstName = "Isabel";
+        vm.changeName = changeName;
+
+        function changeName() {
+            vm.firstName = "Raysa";
+        }
+
     }
 })();
 

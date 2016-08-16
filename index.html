@@ -7,19 +7,7 @@
 </head>
 <body ng-controller="myController as vm">
 
-<label for="name"></label>
-<input id="name" ng-model="name">
-<h1>Usted ingreso: {{name}}</h1>
-
-<form name="myForm">
-    Email: <input type="email" name="myAddress" ng-model="text">
-    <span ng-show="myForm.myAddress.$error.email" > no es un email valido!</span>
-    <h3>Application status</h3>
-    <p> Valid: {{myForm.myAddress.$valid}}</p>
-    <p>Dirty: {{myForm.myAddress.$dirty}}</p>
-    <p>Touched: {{myForm.myAddress.$touched}}</p>
-</form>
-
+<h1 ng-click="vm.changeName()"> {{vm.firstName}}</h1>
 
 
 <script src="node_modules/angular/angular.js"></script>
